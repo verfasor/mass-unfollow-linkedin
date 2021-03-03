@@ -1,2 +1,2 @@
-# mass-unfollow-linkedin
-JavaScript snippet to mass unfollow linkedin connections. 
+# Mass Unfollow LinkedIn Connections
+Guide: https://verfasor.com/mass-unfollow-linkedin-connections/
