@@ -1,3 +1,3 @@
 # Mass Unfollow LinkedIn Connections
 
-Guide: https://minimalquest.org/mass-unfollow-linkedin-connections/
+Guide: https://jotzilla.net/mass-unfollow-linkedin-connections/
