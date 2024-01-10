@@ -1,24 +1,27 @@
 (() => {
   let count = 0;
   function getAllButtons() {
-    return document.querySelectorAll('button.is-following') || [];
+    return document.querySelectorAll('button.artdeco-button--2.artdeco-button--secondary') || [];
   }
   async function unfollowAll() {
     const buttons = getAllButtons();
-
     for (let button of buttons) {
-      count = count + 1;
+      if (button){
+      	button.click();
+        await new Promise((resolve) => setTimeout(resolve, 100));
 
-      const name = button.parentElement.querySelector(
-        '.follows-recommendation-card__name',
-      ).innerText;
-      console.log(`Unfollow #${count}:`, name);
+        const b_unfollow = document.querySelector('button.artdeco-button--2.artdeco-button--primary.artdeco-modal__confirm-dialog-btn');
+      	if (b_unfollow){
+      		b_unfollow.click();
+          await new Promise((resolve) => setTimeout(resolve, 100));
 
-      window.scrollTo(0, button.offsetTop - 260);
-      button.click();
-
+          count = count + 1;
+      		console.log(`Unfollow #${count}`);
+      	}
+      }
       await new Promise((resolve) => setTimeout(resolve, 100));
     }
+    window.scrollTo(0, 260);
   }
   async function run() {
     await unfollowAll();
